@@ -24,7 +24,6 @@ services:
           - "8000:8000"
       volumes:
           - ./demo_django:/app/demo_django
-          - ./docker-entrypoint.sh:/app/docker-entrypoint.sh
       env_file: 
           ./envs/common.env
       deploy: *template-deploy
