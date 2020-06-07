@@ -1,0 +1,30 @@
+[
+  {
+    "model": "stores.paymentmethod",
+    "fields": {
+      "name": "Dinheiro",
+      "status": true
+    }
+  },
+  {
+    "model": "stores.paymentmethod",
+    "fields": {
+      "name": "Débito",
+      "status": true
+    }
+  },
+  {
+    "model": "stores.paymentmethod",
+    "fields": {
+      "name": "Crédito",
+      "status": true
+    }
+  },
+  {
+    "model": "stores.paymentmethod",
+    "fields": {
+      "name": "Crédito a vista",
+      "status": true
+    }
+  }
+]

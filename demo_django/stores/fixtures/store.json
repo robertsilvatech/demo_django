@@ -1,0 +1,44 @@
+[
+  {
+    "model": "stores.store",
+    "fields": {
+      "name": "Sao Paulo",
+      "status": true
+    }
+  },
+  {
+    "model": "stores.store",
+    "fields": {
+      "name": "Rio de Janeiro",
+      "status": true
+    }
+  },
+  {
+    "model": "stores.store",
+    "fields": {
+      "name": "Belo Horizonte",
+      "status": true
+    }
+  },
+  {
+    "model": "stores.store",
+    "fields": {
+      "name": "Goiania",
+      "status": true
+    }
+  },
+  {
+    "model": "stores.store",
+    "fields": {
+      "name": "Espirito Santo",
+      "status": true
+    }
+  },
+  {
+    "model": "stores.store",
+    "fields": {
+      "name": "Recife",
+      "status": true
+    }
+  }
+]

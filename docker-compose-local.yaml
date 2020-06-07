@@ -1,0 +1,54 @@
+version: "3.7"
+
+x-deploy: &template-deploy
+  replicas: 1
+  restart_policy:
+      condition: any
+  update_config:
+      parallelism: 1
+      delay: 10s
+
+services:
+  db:
+    image: postgres:12.3
+    networks:
+      - "monitoring-network"
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./db-data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=django
+      - POSTGRES_PASSWORD=django
+      - POSTGRES_DB=django
+    deploy: *template-deploy
+  adminer:
+    image: adminer
+    networks:
+      - "monitoring-network"
+    ports:
+      - 8090:8080
+    deploy: *template-deploy
+  demo_django:
+      image: treborbrz/demo_django
+      networks:
+          - "monitoring-network"
+      ports:
+          - "8000:8000"
+      volumes:
+          - ./demo_django:/app/demo_django
+          - ./docker-entrypoint.sh:/app/docker-entrypoint.sh
+      env_file: 
+          ./envs/local.env
+      deploy:
+          replicas: 1
+          restart_policy:
+              condition: any
+          update_config:
+              parallelism: 1
+              delay: 10s
+      entrypoint: /app/docker-entrypoint.sh
+
+networks:
+    monitoring-network:
+        external: True

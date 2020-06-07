@@ -1,0 +1,51 @@
+[
+  {
+    "model": "stores.product",
+    "fields": {
+      "name": "Calça",
+      "price": "62"
+    }
+  },
+  {
+    "model": "stores.product",
+    "fields": {
+      "name": "Bermuda",
+      "price": "49"
+    }
+  },
+  {
+    "model": "stores.product",
+    "fields": {
+      "name": "Camisa",
+      "price": "30"
+    }
+  },
+  {
+    "model": "stores.product",
+    "fields": {
+      "name": "Camiseta",
+      "price": "35"
+    }
+  },
+  {
+    "model": "stores.product",
+    "fields": {
+      "name": "Casaco",
+      "price": "90"
+    }
+  },
+  {
+    "model": "stores.product",
+    "fields": {
+      "name": "Meia",
+      "price": "22"
+    }
+  },
+  {
+    "model": "stores.product",
+    "fields": {
+      "name": "Sapato",
+      "price": "69"
+    }
+  }
+]

@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load bootstrap %}
+
+
+{% block title %} Novo cliente {% endblock %}
+{% block main %}
+
+<table class="table table-sm">
+    <thread>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Quantidade</th>
+            <th scope="col">Forma de pagamento</th>
+            <th scope="col">Loja</th>
+        </tr>
+    </thread>
+    <tbody>
+        {% if sales %}
+        {% for sale in sales %}
+        <tr>
+            <td>{{ sale.id }}</td>
+            <td>{{ sale.count }}</td>
+            <td>{{ sale.payment_method }}</td>
+            <td>{{ sale.store }}</td>
+        </tr>
+        {% endfor %}
+        {% endif %}
+    </tbody>
+</table>
+
+{% endblock %}

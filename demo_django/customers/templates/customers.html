@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load bootstrap %}
+
+
+{% block title %} Novo cliente {% endblock %}
+{% block main %}
+
+<table class="table table-sm">
+    <thread>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Sobrenome</th>
+            <th scope="col">Status</th>
+        </tr>
+    </thread>
+    <tbody>
+        {% if customers %}
+        {% for customer in customers %}
+        <tr>
+            <td>{{ customer.id }}</td>
+            <td>{{ customer.first_name }}</td>
+            <td>{{ customer.last_name }}</td>
+            <td>{% if customer.status %}Habilitado{% else %}Desabilitado{% endif %}</td>
+        </tr>
+        {% endfor %}
+        {% endif %}
+    </tbody>
+</table>
+
+<a href='{% url 'customer_new' %}'>Novo cliente</a>
+{% endblock %}

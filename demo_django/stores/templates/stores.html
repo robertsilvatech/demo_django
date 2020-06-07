@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load bootstrap %}
+
+
+{% block title %} Novo cliente {% endblock %}
+{% block main %}
+
+<table class="table table-sm">
+    <thread>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Estado</th>
+            <th scope="col">Status</th>
+        </tr>
+    </thread>
+    <tbody>
+        {% if stores %}
+        {% for store in stores %}
+        <tr>
+            <td>{{ store.id }}</td>
+            <td>{{ store.name }}</td>
+            <td>{{ store.state }}</td>
+            <td>{% if store.status %}Habilitado{% else %}Desabilitado{% endif %}</td>
+        </tr>
+        {% endfor %}
+        {% endif %}
+    </tbody>
+</table>
+
+<a href='{% url 'store_new' %}'>Nova Loja</a>
+{% endblock %}
