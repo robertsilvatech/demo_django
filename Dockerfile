@@ -2,7 +2,7 @@ FROM python:3.7-slim
 
 ARG DJANGO_PROJECT_NAME
 RUN apt-get update && \
-apt-get install -y iputils-ping curl telnet wget
+    apt-get install -y iputils-ping curl telnet wget traceroute 
 
 COPY requirements.txt /
 RUN pip install -U pip && pip install -r requirements.txt
