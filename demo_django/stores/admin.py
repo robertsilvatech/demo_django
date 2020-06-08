@@ -13,7 +13,6 @@ class SaleDateilInLine(admin.TabularInline):
     extra = 0
 
 class SaleAdmin(admin.ModelAdmin):
-    #list_display = ['__str__','store']
     inlines = [SaleDateilInLine]
 
 admin.site.register(Sale, SaleAdmin)

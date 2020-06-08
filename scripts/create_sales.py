@@ -1,5 +1,6 @@
 import psycopg2
 import sys
+from datetime import datetime
 from random import randint
 
 address = '10.0.0.31'
@@ -32,8 +33,10 @@ def get_lastid_stores_sale():
     return result
 
 def make_a_sale(store_id=1, payment_method_id=1):
-    insert = 'INSERT INTO "stores_sale" ("store_id", "payment_method_id") values (%s, %s)'
-    row_to_insert = (store_id,payment_method_id)
+    insert = 'INSERT INTO "stores_sale" ("store_id", "payment_method_id", "created_at", "updated_at") values (%s, %s, %s, %s)'
+    timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+    print(type(timestamp))
+    row_to_insert = (store_id,payment_method_id, timestamp, timestamp)
     cursor.execute(insert, row_to_insert)
     conn.commit()
 
