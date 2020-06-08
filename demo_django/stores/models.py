@@ -16,14 +16,6 @@ class Store(models.Model):
     def __str__(self):
         return self.name
 
-class ConsolidadeSale(models.Model):
-    count = models.IntegerField(default=1)
-    payment_method = models.ForeignKey(PaymentMethod, null=True, blank=True, on_delete=models.PROTECT)
-    store = models.ForeignKey(Store, null=True, blank=True, on_delete=models.PROTECT)
-
-    def __str__(self):
-        return self.store.name
-
 class Product(models.Model):
     name = models.CharField(max_length=100, unique=True)
     price = models.DecimalField('Preço', max_digits=5, decimal_places=2, null=True, blank=True)
@@ -34,6 +26,8 @@ class Product(models.Model):
 class Sale(models.Model):
     store = models.ForeignKey(Store, null=True, blank=True, on_delete=models.PROTECT)
     payment_method = models.ForeignKey(PaymentMethod, null=True, blank=True, on_delete=models.PROTECT)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return str(self.id)
