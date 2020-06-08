@@ -14,7 +14,7 @@ services:
     networks:
       - "monitoring-network"
     ports:
-      - 8090:8080
+      - "8090:8080"
     deploy: *template-deploy
   demo_django:
       image: treborbrz/demo_django

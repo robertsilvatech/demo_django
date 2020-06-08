@@ -8,7 +8,7 @@ admin.site.register(Product)
 admin.site.register(SaleDetail)
 
 class SaleDateilInLine(admin.TabularInline):
-    list_display = ['name', 'prince']
+    list_display = ['name', 'price']
     model = SaleDetail
     extra = 0
 

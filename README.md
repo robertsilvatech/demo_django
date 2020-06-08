@@ -23,10 +23,10 @@ vim /etc/crontab
 # |  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat
 # |  |  |  |  |
 # *  *  *  *  * user-name  command to be executed
-*/2 * * * * root python3 /root/demo_django/scripts/create_sales.py 1
-*/2 * * * * root python3 /root/demo_django/scripts/create_sales.py 2
-*/2 * * * * root python3 /root/demo_django/scripts/create_sales.py 3
-*/2 * * * * root python3 /root/demo_django/scripts/create_sales.py 4
-*/2 * * * * root python3 /root/demo_django/scripts/create_sales.py 5
-*/2 * * * * root python3 /root/demo_django/scripts/create_sales.py 6
+*/2 9-21 * * * root python3 /root/demo_django/scripts/create_sales.py 1
+*/2 9-21 * * * root python3 /root/demo_django/scripts/create_sales.py 2
+*/2 9-19 * * * root python3 /root/demo_django/scripts/create_sales.py 3
+*/2 9-19 * * * root python3 /root/demo_django/scripts/create_sales.py 4
+*/2 9-19 * * * root python3 /root/demo_django/scripts/create_sales.py 5
+*/2 9-19 * * * root python3 /root/demo_django/scripts/create_sales.py 6
 ```
