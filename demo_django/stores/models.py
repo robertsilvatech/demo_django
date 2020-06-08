@@ -26,8 +26,8 @@ class Product(models.Model):
 class Sale(models.Model):
     store = models.ForeignKey(Store, null=True, blank=True, on_delete=models.PROTECT)
     payment_method = models.ForeignKey(PaymentMethod, null=True, blank=True, on_delete=models.PROTECT)
-    created_at = models.DateTimeField(auto_now_add=True, null=True, blank=True)
-    updated_at = models.DateTimeField(auto_now=True, null=True, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return str(self.id)
