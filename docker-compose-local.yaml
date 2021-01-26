@@ -9,7 +9,7 @@ x-deploy: &template-deploy
       delay: 10s
 
 services:
-  db:
+  django_db:
     image: postgres:12.3
     networks:
       - "monitoring-network"
@@ -17,6 +17,7 @@ services:
       - "5432:5432"
     volumes:
       - ./db-data:/var/lib/postgresql/data
+      #- ./confs/postgresql/pg_hba.conf:/var/lib/postgresql/data/pg_hba.conf
     environment:
       - POSTGRES_USER=django
       - POSTGRES_PASSWORD=django
