@@ -3,7 +3,7 @@ import sys
 from datetime import datetime
 from random import randint
 
-address = '10.0.0.31'
+address = '10.0.0.62'
 user = 'django'
 password = 'django'
 database = 'django'
