@@ -40,5 +40,19 @@
       "name": "Recife",
       "status": true
     }
+  },
+  {
+    "model": "stores.store",
+    "fields": {
+      "name": "Santos",
+      "status": true
+    }
+  },
+  {
+    "model": "stores.store",
+    "fields": {
+      "name": "Barueri",
+      "status": true
+    }
   }
 ]

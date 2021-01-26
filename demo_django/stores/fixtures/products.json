@@ -2,50 +2,50 @@
   {
     "model": "stores.product",
     "fields": {
-      "name": "Calça",
-      "price": "62"
+      "name": "Arroz",
+      "price": "28"
     }
   },
   {
     "model": "stores.product",
     "fields": {
-      "name": "Bermuda",
-      "price": "49"
+      "name": "Feijao",
+      "price": "8"
     }
   },
   {
     "model": "stores.product",
     "fields": {
-      "name": "Camisa",
-      "price": "30"
+      "name": "Oleo",
+      "price": "7"
     }
   },
   {
     "model": "stores.product",
     "fields": {
-      "name": "Camiseta",
-      "price": "35"
+      "name": "Carne",
+      "price": "45"
     }
   },
   {
     "model": "stores.product",
     "fields": {
-      "name": "Casaco",
-      "price": "90"
+      "name": "Frango",
+      "price": "13"
     }
   },
   {
     "model": "stores.product",
     "fields": {
-      "name": "Meia",
-      "price": "22"
+      "name": "Refrigerante",
+      "price": "10"
     }
   },
   {
     "model": "stores.product",
     "fields": {
-      "name": "Sapato",
-      "price": "69"
+      "name": "Suco",
+      "price": "10"
     }
   }
 ]
